@@ -35,14 +35,13 @@ done
 # Fetch microG
 chmod +x apkeep
 
-./apkeep -a com.google.android.youtube@YT_VERSION .
-./apkeep -a com.google.android.apps.youtube.music@5.03.50 .
+./apkeep -a com.google.android.youtube@YT_VERSION -d huawei-app-gallery. 
+./apkeep -a com.google.android.apps.youtube.music@5.03.50 -d huawei-app-gallery .
 
 if [ ! -f "vanced-microG.apk" ]; then
     echo "Downloading Vanced microG"
     ./apkeep -a com.mgoogle.android.gms@$VMG_VERSION .
     mv com.mgoogle.android.gms@$VMG_VERSION.apk vanced-microG.apk
-    wget https://storage.evozi.com/apk/dl/16/12/14/com.google.android.youtube_1522916800.apk -o youtube.apk
 fi
 
 if [ -f "com.google.android.youtube.xapk" ]
