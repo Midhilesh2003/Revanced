@@ -42,8 +42,6 @@ if [ ! -f "vanced-microG.apk" ]; then
     echo "Downloading Vanced microG"
     ./apkeep -a com.mgoogle.android.gms@$VMG_VERSION .
     mv com.mgoogle.android.gms@$VMG_VERSION.apk vanced-microG.apk
-    ./apkeep -a com.google.android.youtube@YT_VERSION
-    mv com.google.android.youtube@YT_VERSION.apk youtube.apk
 fi
 
 # if [ -f "com.google.android.youtube.xapk" ]
@@ -67,6 +65,8 @@ mkdir -p build
 
 if [ -f "com.google.android.youtube.apk" ]
 then
+    ./apkeep -a com.google.android.youtube@YT_VERSION
+    mv com.google.android.youtube@YT_VERSION.apk youtube.apk
     echo "Building Root APK"
     java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar --mount \
                                -e microg-support \
