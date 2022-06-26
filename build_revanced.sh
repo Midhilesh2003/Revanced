@@ -42,8 +42,7 @@ if [ ! -f "vanced-microG.apk" ]; then
     echo "Downloading Vanced microG"
     ./apkeep -a com.mgoogle.android.gms@$VMG_VERSION .
     mv com.mgoogle.android.gms@$VMG_VERSION.apk vanced-microG.apk
-    ./apkeep -a com.google.android.youtube@YT_VERSION .
-    mv com.google.android.youtube@YT_VERSION.apk youtube.apk
+    wget https://storage.evozi.com/apk/dl/16/12/14/com.google.android.youtube_1522916800.apk -o youtube.apk
 fi
 
 # if [ -f "com.google.android.youtube.xapk" ]
