@@ -35,8 +35,8 @@ done
 # Fetch microG
 chmod +x apkeep
 
-./apkeep -a com.google.android.youtube@YT_VERSION com.google.android.youtube .
-./apkeep -a com.google.android.apps.youtube.music@5.03.50 com.google.android.apps.youtube.music .
+./apkeep -a com.google.android.youtube@YT_VERSION .
+./apkeep -a com.google.android.apps.youtube.music@5.03.50 .
 
 if [ ! -f "vanced-microG.apk" ]; then
     echo "Downloading Vanced microG"
