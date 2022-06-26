@@ -35,7 +35,7 @@ done
 # Fetch microG
 chmod +x apkeep
 
-./apkeep -a com.google.android.youtube@YT_VERSION -d huawei-app-gallery . 
+./apkeep -a com.google.android.youtube-d huawei-app-gallery . 
 ./apkeep -a com.google.android.apps.youtube.music@5.03.50 -d huawei-app-gallery .
 
 if [ ! -f "vanced-microG.apk" ]; then
