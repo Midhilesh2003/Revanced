@@ -35,7 +35,7 @@ done
 # Fetch microG
 chmod +x apkeep
 
-# ./apkeep -a com.google.android.youtube@17.24.34 com.google.android.youtube
+./apkeep -a com.google.android.youtube@17.24.34 com.google.android.youtube
 # ./apkeep -a com.google.android.apps.youtube.music@5.03.50 com.google.android.apps.youtube.music
 
 if [ ! -f "vanced-microG.apk" ]; then
@@ -45,16 +45,16 @@ if [ ! -f "vanced-microG.apk" ]; then
     wget https://storage.evozi.com/apk/dl/16/12/14/com.google.android.youtube_1522916800.apk -o youtube.apk
 fi
 
-# if [ -f "com.google.android.youtube.xapk" ]
-# then
-#     unzip com.google.android.youtube.xapk -d youtube
-#     yt_apk_path="youtube/com.google.android.youtube.apk"
-# elif [ -f "com.google.android.youtube.apk" ]
-# then
-#     yt_apk_path="com.google.android.youtube.apk"
-# else
-#     echo "Cannot find APK"
-# fi
+if [ -f "com.google.android.youtube.xapk" ]
+then
+    unzip com.google.android.youtube.xapk -d youtube
+    yt_apk_path="youtube/com.google.android.youtube.apk"
+elif [ -f "com.google.android.youtube.apk" ]
+then
+    yt_apk_path="com.google.android.youtube.apk"
+else
+    echo "Cannot find APK"
+fi
 
 echo "************************************"
 echo "Building YouTube APK"
