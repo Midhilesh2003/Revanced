@@ -87,6 +87,7 @@ then
                                -a com.google.android.apps.youtube.music.apk -o build/revanced-music-root.apk
     echo "Building Non-root APK"
     java -jar revanced-cli.jar -b revanced-patches.jar \
+                               -e amoled -e disable-create-button-e hide-autoplay-button -e disable-fullscreen-panels-e old-quality-layout-e hide-shorts-button -e hide-watermark -e enable-wide-searchbar -e always-autorepeat -e hide-infocard-suggestions
                                -a com.google.android.apps.youtube.music.apk -o build/revanced-music-nonroot.apk
 else
     echo "Cannot find YouTube Music APK, skipping build"
